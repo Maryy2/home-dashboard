@@ -1,0 +1,59 @@
+html, body{
+    background-color: rgb(236, 236, 236);
+    padding: 0;
+    margin: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png');
+}
+
+.box {
+    background-color: #ffffff;
+    color: blue;
+    display: inline-block;
+    width: 98%;
+    height: 90vh;
+    margin-left: 315px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.box-title {
+    font-size: 20px;
+    color: #212121;
+    text-shadow: #4f4f4f 1px 1px 1px;
+    margin-left: 315px;
+    /*border: red solid 2px;*/
+}
+
+.sidebar {
+    background-color: #282525;
+    width: 250px;
+    color: white;
+    text-shadow: #4f4f4f 1px 1px 2px;
+    background-image: url('https://www.transparenttextures.com/patterns/black-twill.png');
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f0f0f0;
+    text-shadow: #4f4f4f 1px 1px 2px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 2px solid #4f4f4f;
+}
+
+.sidebar-item {
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: #847979;
+    padding: 6px;
+    border-radius: 4px;
+    list-style-type: none;
+    text-align: center;
+}   
