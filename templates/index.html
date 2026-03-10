@@ -39,9 +39,14 @@
             <p>Použito: {{ "%.2f"% (data.disk2.used / (1024**3)) }} GB</p>
             <p>Volné: {{ "%.2f"% (data.disk2.free / (1024**3)) }} GB</p>
             <p>Procento: {{ "%.1f"% (data.disk2.percent) }}%</p>
-            <p>Teplota: {{data.temp}} °C</p>
         </div>
         {% endif %}
+
+        </div>
+            <div class="stat-card">
+            <h3 class="stat-card-title">Temperature</h3>
+            <p>Teplota: {{data.temp}} °C</p>
+        </div>
 
         <div class ="action-card">
             <h3 class="stat-card-title">To-Do List</h3>
