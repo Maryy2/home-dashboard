@@ -39,6 +39,7 @@
             <p>Použito: {{ "%.2f"% (data.disk2.used / (1024**3)) }} GB</p>
             <p>Volné: {{ "%.2f"% (data.disk2.free / (1024**3)) }} GB</p>
             <p>Procento: {{ "%.1f"% (data.disk2.percent) }}%</p>
+            <p>Teplota: {{data.temp}} °C</p>
         </div>
         {% endif %}
 
