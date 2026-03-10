@@ -20,17 +20,17 @@
         <div class="stat-card">
             <h3 class="stat-card-title">CPU usage</h3>
             <p>{{ data.cpu }}% </p>
-            <p>Sales: 5678</p>
         </div>
             <div class="stat-card">
             <h3 class="stat-card-title">Memory usage</h3>
             <p>{{ data.ram }}% </p>
-            <p>Sales: 5678</p>
         </div>
             <div class="stat-card">
             <h3 class="stat-card-title">Disk usage</h3>
-            <p>{{ data.disk }}% </p>
-            <p>Sales: 5678</p>
+            <p>Celkem : {{ "%.2f"% (data.disk.total / (1024**3)) }} GB</p>
+            <p>Použito: {{ "%.2f"% (data.disk.used / (1024**3)) }} GB</p>
+            <p>Volné: {{ "%.2f"% (data.disk.free / (1024**3)) }} GB</p>
+            <p>Procento: {{ "%.1f"% (data.disk.percent) }}%</p>
         </div>
 
         <div class ="action-card">
