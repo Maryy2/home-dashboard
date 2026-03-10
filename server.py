@@ -8,8 +8,13 @@ def home():
     data = {
         "cpu": psutil.cpu_percent(interval=1),
         "ram": psutil.virtual_memory().percent,
-        "disk": psutil.disk_usage('/')
+        "disk1": psutil.disk_usage('/'),
+        "disk2": None
     }
+    try:
+        data["disk2"] = psutil.disk_usage('/media/mary/1ED2-42BD')
+    except FileNotFoundError:
+        data["disk2"] = "nic"
     return render_template("index.html", data=data)
 
 if __name__ == "__main__":

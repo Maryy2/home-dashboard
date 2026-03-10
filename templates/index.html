@@ -26,12 +26,21 @@
             <p>{{ data.ram }}% </p>
         </div>
             <div class="stat-card">
-            <h3 class="stat-card-title">Disk usage</h3>
-            <p>Celkem : {{ "%.2f"% (data.disk.total / (1024**3)) }} GB</p>
-            <p>Použito: {{ "%.2f"% (data.disk.used / (1024**3)) }} GB</p>
-            <p>Volné: {{ "%.2f"% (data.disk.free / (1024**3)) }} GB</p>
-            <p>Procento: {{ "%.1f"% (data.disk.percent) }}%</p>
+            <h3 class="stat-card-title">Disk usage 1</h3>
+            <p>Celkem : {{ "%.2f"% (data.disk1.total / (1024**3)) }} GB</p>
+            <p>Použito: {{ "%.2f"% (data.disk1.used / (1024**3)) }} GB</p>
+            <p>Volné: {{ "%.2f"% (data.disk1.free / (1024**3)) }} GB</p>
+            <p>Procento: {{ "%.1f"% (data.disk1.percent) }}%</p>
         </div>
+        {% if data.disk2 != "nic" %}
+            <div class="stat-card">
+            <h3 class="stat-card-title">Disk usage 2</h3>
+            <p>Celkem : {{ "%.2f"% (data.disk2.total / (1024**3)) }} GB</p>
+            <p>Použito: {{ "%.2f"% (data.disk2.used / (1024**3)) }} GB</p>
+            <p>Volné: {{ "%.2f"% (data.disk2.free / (1024**3)) }} GB</p>
+            <p>Procento: {{ "%.1f"% (data.disk2.percent) }}%</p>
+        </div>
+        {% endif %}
 
         <div class ="action-card">
             <h3 class="stat-card-title">To-Do List</h3>
