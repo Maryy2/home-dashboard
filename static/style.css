@@ -7,10 +7,9 @@ html, body{
 
 .box {
     background-color: #ffffff;
-    color: blue;
     display: inline-block;
     width: 98%;
-    height: 90vh;
+    height: 78vh;
     margin-left: 315px;
     padding: 20px;
     border-radius: 8px;
@@ -27,7 +26,7 @@ html, body{
 
 .sidebar {
     background-color: #282525;
-    width: 250px;
+    width: 235px;
     color: white;
     text-shadow: #4f4f4f 1px 1px 2px;
     background-image: url('https://www.transparenttextures.com/patterns/black-twill.png');
@@ -57,3 +56,47 @@ html, body{
     list-style-type: none;
     text-align: center;
 }   
+
+.logged-as {
+    list-style-type: none;
+    bottom: 20px;
+    width: 210px;
+    text-align: left;
+    margin-top: 435px;
+    font-size: 14px;
+    color: #f0f0f0;
+    text-shadow: #4f4f4f 1px 1px 2px;
+}
+
+.stat-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    gap: 10px;
+    display: inline-block;
+}
+
+.stat-card-title {
+    font-size: 16px;
+    color: #212121;
+    text-shadow: #4f4f4f 1px 1px 1px;
+    margin-bottom: 5px;
+    height: 25px;
+    border-bottom: #727272 solid 2px;
+}
+
+.action-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    gap: 10px;
+    display: inline-block;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="sidebar">
+            <h1 class="sidebar-title">Dashboard</h1>
+                <li class="sidebar-item">Home</li>
+                <li class="sidebar-item">Settings</li>
+                <li class="sidebar-item">Profile</li>
+                <li class="sidebar-item">Logout</li>
+                <li class="logged-as">Logged in as: <span class="username">John Doe</span></div>
+    </div>
+    <div class="box-title"><h1>Welcome to Your Dashboard</h1></div>
+    <div class="box"><h1>Hello World</h1>
+        <div class="stat-card">
+            <h3 class="stat-card-title">CPU usage</h3>
+            <p>{{ data.cpu }}% </p>
+            <p>Sales: 5678</p>
+        </div>
+            <div class="stat-card">
+            <h3 class="stat-card-title">Memory usage</h3>
+            <p>{{ data.ram }}% </p>
+            <p>Sales: 5678</p>
+        </div>
+            <div class="stat-card">
+            <h3 class="stat-card-title">Disk usage</h3>
+            <p>{{ data.disk }}% </p>
+            <p>Sales: 5678</p>
+        </div>
+
+        <div class ="action-card">
+            <h3 class="stat-card-title">To-Do List</h3>
+            <input type="checkbox"> <span>Visitors: 1234</span> <br>
+            <input type="checkbox"> <span>Sales: 5678</span>
+        </div>
+    </div> 
+
+</body>
+</html>
