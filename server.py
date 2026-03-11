@@ -28,12 +28,12 @@ def home():
         data["disk2"] = "nic"
     return render_template("index.html", data=data, is_raspberry_pi=is_raspberry_pi)
 
-@app.route("/led/on")
+@app.route("/led/on", methods=["POST"])
 def led_on():
     asyncio.run(tapo_on())
     return jsonify({"status": "LED zapnuta!"})
 
-@app.route("/led/off")
+@app.route("/led/off", methods=["POST"])
 def led_off():
     asyncio.run(tapo_off())
     return jsonify({"status": "LED vypnuta!"})
