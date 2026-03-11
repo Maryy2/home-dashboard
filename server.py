@@ -35,7 +35,7 @@ def home():
         data["disk2"] = psutil.disk_usage('/media/mary/1ED2-42BD')
     except FileNotFoundError:
         data["disk2"] = "nic"
-    return render_template("index.html", data=data)
+    return render_template("index.html", data=data, is_raspberry_pi=is_raspberry_pi)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5005, debug=True)
