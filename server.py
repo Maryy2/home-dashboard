@@ -1,5 +1,3 @@
-import os
-import subprocess
 from flask import Flask, render_template, jsonify
 import psutil
 from functions import get_temp, tapo_on, tapo_off, is_raspberry_pi

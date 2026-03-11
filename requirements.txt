@@ -1,1 +1,4 @@
-nul not found
+flask
+python-dotenv
+psutil
+tapo
