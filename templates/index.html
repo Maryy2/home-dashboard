@@ -32,6 +32,7 @@
             <p>Volné: {{ "%.2f"% (data.disk1.free / (1024**3)) }} GB</p>
             <p>Procento: {{ "%.1f"% (data.disk1.percent) }}%</p>
         </div>
+        
         {% if data.disk2 != "nic" %}
             <div class="stat-card">
             <h3 class="stat-card-title">Disk usage 2</h3>

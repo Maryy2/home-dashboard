@@ -1,8 +1,14 @@
+import os
 import subprocess
 from flask import Flask, render_template, jsonify
 import psutil
 
 app = Flask(__name__)
+print("Starting server...")
+
+is_raspberry_pi = os.path.exists("/sys/firmware/devicetree/base/model")
+if is_raspberry_pi: print("Running on Raspberry Pi")
+else: print("Not running on Raspberry Pi")
 
 def get_temp(): 
     temp = subprocess.check_output(["vcgencmd", "measure_temp"])
@@ -19,6 +25,7 @@ def home():
         "disk2": None,
         "temp": get_temp()
     }
+
     try:
         data["disk2"] = psutil.disk_usage('/media/mary/1ED2-42BD')
     except FileNotFoundError:
