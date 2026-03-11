@@ -13,7 +13,8 @@
                 <li class="sidebar-item">Settings</li>
                 <li class="sidebar-item">Profile</li>
                 <li class="sidebar-item">Logout</li>
-                <li class="logged-as">Logged in as: <span class="username">John Doe</span></div>
+                <li class="logged-as">Logged in as: <span class="username">John Doe</span></li></div>
+                <li class="sidebar-item">Server running on: {% if is_raspberry_pi %} Raspberry pi{% else %} Other{% endif %}</li>
     </div>
     <div class="box-title"><h1>Welcome to Your Dashboard</h1></div>
     <div class="box"><h1>Hello World</h1>
@@ -32,7 +33,7 @@
             <p>Volné: {{ "%.2f"% (data.disk1.free / (1024**3)) }} GB</p>
             <p>Procento: {{ "%.1f"% (data.disk1.percent) }}%</p>
         </div>
-        
+
         {% if data.disk2 != "nic" %}
             <div class="stat-card">
             <h3 class="stat-card-title">Disk usage 2</h3>
@@ -43,7 +44,6 @@
         </div>
         {% endif %}
 
-        </div>
             <div class="stat-card">
             <h3 class="stat-card-title">Temperature</h3>
             <p>Teplota: {{data.temp}} °C</p>

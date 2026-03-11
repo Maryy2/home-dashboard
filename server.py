@@ -3,18 +3,23 @@ import subprocess
 from flask import Flask, render_template, jsonify
 import psutil
 
+#create app
 app = Flask(__name__)
-print("Starting server...")
 
+#check if running on Raspberry Pi
+print("\033[92mStarting server...\033[0m")
 is_raspberry_pi = os.path.exists("/sys/firmware/devicetree/base/model")
-if is_raspberry_pi: print("Running on Raspberry Pi")
-else: print("Not running on Raspberry Pi")
+if is_raspberry_pi: print("\033[93m🍓 Running on Raspberry Pi\033[0m")
+else: print("\033[94m💻 Not running on Raspberry Pi\033[0m")
 
 def get_temp(): 
-    temp = subprocess.check_output(["vcgencmd", "measure_temp"])
-    temp = temp.decode()
-    temp = temp.replace("temp=","").replace("'C\n","")
-    return temp
+    if is_raspberry_pi:
+        temp = subprocess.check_output(["vcgencmd", "measure_temp"])
+        temp = temp.decode()
+        temp = temp.replace("temp=","").replace("'C\n","")
+        return temp
+    else:
+        return "N/A"
 
 @app.route("/")
 def home():
